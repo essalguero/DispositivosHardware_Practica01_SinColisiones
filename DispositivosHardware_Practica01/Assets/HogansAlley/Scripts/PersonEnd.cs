@@ -35,11 +35,17 @@ public class PersonEnd : MonoBehaviour {
         }
     }
 
-    void OnCollisionEnter(Collision other)
+    public void HeColisionado()
+    {
+
+        animator.SetTrigger("EndNow");
+    }
+
+    /*void OnCollisionEnter(Collision other)
     {
         if (other.gameObject.tag == "Bullet")
         {
             animator.SetTrigger("EndNow");
         }
-    }
+    }*/
 }
