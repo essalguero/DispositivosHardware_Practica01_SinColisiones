@@ -15,7 +15,7 @@ public class CameraController : MonoBehaviour {
     //[SerializeField]
     public GameObject bullet;
 
-    public float impulse = 10.0f;
+    public float impulse = 2.0f;
 
     // Use this for initialization
     void Start () {
