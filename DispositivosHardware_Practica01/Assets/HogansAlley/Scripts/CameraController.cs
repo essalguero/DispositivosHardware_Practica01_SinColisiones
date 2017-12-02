@@ -25,10 +25,19 @@ public class CameraController : MonoBehaviour {
     // Mueve la camara con el raton
     void CameraMovement()
     {
+        // 
         lastMouse = Input.mousePosition - lastMouse;
+
+        // Cambiado el orden del parametro porque se tiene en cuenta el eje sobre el que se rota
         lastMouse = new Vector3(-lastMouse.y * camSens, lastMouse.x * camSens, 0);
+
+        // 
         lastMouse = new Vector3(transform.eulerAngles.x + lastMouse.x, transform.eulerAngles.y + lastMouse.y, 0);
+
+        // Le asigna a la camara los angulos calculados
         transform.eulerAngles = lastMouse;
+
+        // Guarda la posicion actual para compararla luego
         lastMouse = Input.mousePosition;
     }
 
