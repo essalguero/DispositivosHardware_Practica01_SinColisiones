@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+// Para comprobar si las gafas estan activas
+
+
 public class BulletHandler : MonoBehaviour {
 
     private Rigidbody rb;
@@ -22,6 +25,9 @@ public class BulletHandler : MonoBehaviour {
 
     public void Shoot(Vector3 direction)
     {
+        // Para asegurarse de que cuando se llama a la funcion Shoot, El BulletHandler se ha inicializado
+        // Como resultado se ejecuta dos veces, esta y la automatica
+        Start();
         //Empujar la pelota
         rb.AddForce(direction, ForceMode.Impulse);
     }

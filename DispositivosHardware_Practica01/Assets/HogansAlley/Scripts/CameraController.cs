@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+// Usarlo en Unity 17.2
+//using UnityEngine.XR;
+
 public class CameraController : MonoBehaviour {
 
 
@@ -9,8 +12,10 @@ public class CameraController : MonoBehaviour {
 
     private Vector3 lastMouse = new Vector3(255, 255, 255);
 
-    [SerializeField]
+    //[SerializeField]
     public GameObject bullet;
+
+    public float impulse = 10.0f;
 
     // Use this for initialization
     void Start () {
@@ -19,7 +24,16 @@ public class CameraController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+        
+        // Solo para Unity 2017.2
+        //if (!XR.Settings)
         CameraMovement();
+
+        // Disparar con el boton Fire1 -> Asignado al boton izquierdo del raton
+        if (Input.GetButtonDown("Fire1"))
+        {
+            Shoot();
+        }
 	}
 
     // Mueve la camara con el raton
@@ -45,6 +59,15 @@ public class CameraController : MonoBehaviour {
     // Invoca la bala y dispara
     void Shoot()
     {
+        // Crear el objeto de la bala
+        GameObject cloneBullet = Instantiate(bullet, transform.position, transform.rotation);
 
+        // Obtener la referencia al script que se encarga de mover la bala
+        BulletHandler myScript = cloneBullet.GetComponent<BulletHandler>();
+
+        // Dispara en el sentido al que apunta la camara
+        myScript.Shoot(transform.forward * impulse);
+
+        Destroy(cloneBullet, 3f);
     }
 }
