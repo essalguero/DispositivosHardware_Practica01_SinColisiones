@@ -305,9 +305,9 @@ ParticleSystem:
   serializedVersion: 5
   lengthInSec: 5
   simulationSpeed: 1
-  looping: 1
+  looping: 0
   prewarm: 0
-  playOnAwake: 1
+  playOnAwake: 0
   useUnscaledTime: 0
   autoRandomSeed: 1
   useRigidbodyForVelocity: 1
@@ -3733,7 +3733,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 284891433}
   m_LocalRotation: {x: 0.25205946, y: -0.24985152, z: 0.06753907, w: 0.9324585}
-  m_LocalPosition: {x: 0, y: 3, z: 0}
+  m_LocalPosition: {x: -0.82, y: 5.8, z: 1.42}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -4670,6 +4670,7 @@ GameObject:
   - component: {fileID: 2014566630}
   - component: {fileID: 2014566629}
   - component: {fileID: 2014566634}
+  - component: {fileID: 2014566635}
   m_Layer: 0
   m_Name: Sphere
   m_TagString: Untagged
@@ -4838,6 +4839,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!114 &2014566635
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2014566628}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6936ccb75f210f3498f7b3ade8bc7ce0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ps: {fileID: 125956023}
 --- !u!1001 &2026401540
 Prefab:
   m_ObjectHideFlags: 0
