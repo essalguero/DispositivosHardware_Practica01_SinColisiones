@@ -105,6 +105,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\DestroyScript.cs" />
     <Compile Include="Assets\HogansAlley\Scripts\BulletHandler.cs" />
     <Compile Include="Assets\HogansAlley\Scripts\CameraController.cs" />
     <Compile Include="Assets\HogansAlley\Scripts\SpawnManager.cs" />
