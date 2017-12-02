@@ -8,6 +8,7 @@ using UnityEngine;
 public class BulletHandler : MonoBehaviour {
 
     private Rigidbody rb;
+
     private AudioSource audioSource;
     public AudioClip audioClipHit;
     public ParticleSystem ps;
