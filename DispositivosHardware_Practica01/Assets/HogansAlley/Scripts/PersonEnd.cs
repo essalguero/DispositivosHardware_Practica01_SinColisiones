@@ -32,6 +32,8 @@ public class PersonEnd : MonoBehaviour {
         if (Time.realtimeSinceStartup > (waitTime + timeWhenStart))
         {
             animator.SetTrigger("EndNow");
+            GameplayManager.GetInstance().points += pointsWhenDie;
+            waitTime = 100000f;
         }
     }
 
@@ -39,6 +41,7 @@ public class PersonEnd : MonoBehaviour {
     {
 
         animator.SetTrigger("EndNow");
+        GameplayManager.GetInstance().points += pointsWhenHit;
     }
 
     /*void OnCollisionEnter(Collision other)
