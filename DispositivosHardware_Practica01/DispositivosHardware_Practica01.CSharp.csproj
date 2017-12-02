@@ -108,6 +108,7 @@
     <Compile Include="Assets\DestroyScript.cs" />
     <Compile Include="Assets\HogansAlley\Scripts\BulletHandler.cs" />
     <Compile Include="Assets\HogansAlley\Scripts\CameraController.cs" />
+    <Compile Include="Assets\HogansAlley\Scripts\PersonEnd.cs" />
     <Compile Include="Assets\HogansAlley\Scripts\SpawnManager.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\SyntaxTree\UnityVS\2015\UnityVS.CSharp.targets" />
